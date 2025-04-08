@@ -1,10 +1,10 @@
-import 'reflect-metadata';
-import BookRepository from '../services/BookRepository';
-import { Container } from 'inversify';
+import "reflect-metadata";
+import BookRepository from "../services/BookRepository";
+import { Container } from "inversify";
 
 const container = new Container();
-container.bind(BookRepository).toSelf().inSingletonScope();
+container.bind(BookRepository).toSelf();
 
-const service = container.get(BookRepository)
+const service = container.get(BookRepository);
 
 export default service;
